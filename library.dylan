@@ -245,11 +245,6 @@ define module changes
     content, content-setter,
     published, published-setter;
 
-  // why is this being exported from a module named "changes"?  It conflicts
-  // with <uri> from the uri library, and it's really just <string> anyway.
-  // --cgay
-  export <uri>;
-  
   export <link>,
     href, href-setter;
 end;

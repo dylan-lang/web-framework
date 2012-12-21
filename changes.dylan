@@ -112,6 +112,7 @@ define abstract class <content> (<object>)
   slot type :: <string> = "text", init-keyword: type:;
   slot content :: <text>, init-keyword: content:;
 end;
+ignore(type-setter);
 
 define class <raw-content> (<content>)
   inherited slot type = "raw";
@@ -151,6 +152,7 @@ define class <person> (<object>)
   slot uri :: false-or(<uri>) = #f, init-keyword: uri:;
   slot email :: false-or(<email>) = #f, init-keyword: email:;
 end;
+ignore(person-name, person-name-setter, email, email-setter);
 
 define class <category> (<object>)
   slot term :: <text>,
@@ -165,8 +167,10 @@ end;
 
 define constant <text> = <string>;
 
+/* unused
 define class <xhtml-div> (<object>)
 end;
+*/
 
 define constant <email> = <string>;
 
@@ -176,6 +180,7 @@ define class <generator> (<object>)
     init-keyword: version:;
   slot text :: <text>, init-keyword: text:;
 end;
+ignore(system-version-setter);
 
 define open class <link> (<object>)
   slot href :: <uri>,
@@ -195,7 +200,8 @@ define open class <link> (<object>)
   slot categories :: <vector> = #[],
      init-keyword: categories:;
 end;
-    
+ignore(rel-setter, hreflang, hreflang-setter, length, length-setter);
+
 define constant <source> = <feed>;
 
 define open generic permanent-link
