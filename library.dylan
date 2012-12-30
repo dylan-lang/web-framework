@@ -8,8 +8,8 @@ define library web-framework
   use dsp;
   use dylan;
   use http-common;
+  use http-server;
   use io;
-  use koala;
   use system, import: { file-system, date, locators };
   use uri;
   use xml-parser;
@@ -37,7 +37,7 @@ define module storage
   use dood;
   use file-system;
   use http-common;
-  use koala;
+  use http-server;
   use format-out;
   use locators,
     exclude: { <http-server> };
@@ -105,7 +105,7 @@ define module users
   use dylan;
   use dsp, import: { set-attribute, get-attribute };
   use http-common;
-  use koala;
+  use http-server;
   use storage;
   use web-framework-macro;
 
@@ -170,7 +170,7 @@ define module changes
               parse-document, root, <element>,
               name-setter => xml-name-setter};
   use simple-xml;
-  use koala;
+  use http-server;
   use object-table;
   use storage;
   use web-framework-macro;
@@ -268,7 +268,7 @@ define module web-framework
     exclude: { remove-attribute };
   use dsp;
   use format;
-  use koala;
+  use http-server;
   use object-table;
   use permission;
   use simple-xml;
