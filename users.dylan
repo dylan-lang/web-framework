@@ -5,7 +5,7 @@ define thread variable *authenticated-user* = #f;
 
 // The default "realm" value passed in the WWW-Authenticate header.
 //
-define variable *default-authentication-realm* :: <string> = "koala";
+define variable *default-authentication-realm* :: <string> = "web-framework";
 
 // Because clients (browsers) continue to send the Authentication header
 // once an authentication has been accepted (at least until the browser
