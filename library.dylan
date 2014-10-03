@@ -104,6 +104,7 @@ define module users
   use common-dylan;
   use dylan;
   use dsp, import: { set-attribute, get-attribute };
+  use format;
   use http-common;
   use http-server;
   use storage;
