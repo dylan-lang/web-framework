@@ -1,0 +1,14 @@
+{
+    "category": "utilities",
+    "contact": "dylan-lang@googlegroups.com",
+    "description": "Web app utilities",
+    "keywords": [ "web" ],
+    "name": "web-framework",
+    "dependencies": [
+	"http@1.1.2"
+    ],
+    "dev-dependencies" : [],
+    "license": "unknown",
+    "url": "https://github.com/dylan-lang/web-framework",
+    "version": "0.1.1"
+}
