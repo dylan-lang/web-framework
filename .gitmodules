@@ -1,3 +1,0 @@
-[submodule "ext/http"]
-	path = ext/http
-	url = https://github.com/dylan-lang/http
